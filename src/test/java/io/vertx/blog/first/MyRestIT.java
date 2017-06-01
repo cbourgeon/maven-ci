@@ -38,7 +38,7 @@ public class MyRestIT {
     // Now get the individual resource and check the content
     get("/api/whiskies/" + id).then()
         .assertThat()
-        .statusCode(300)
+        .statusCode(200)
         .body("name", equalTo("Bowmore 15 Years Laimrig"))
         .body("origin", equalTo("Scotland, Islay"))
         .body("id", equalTo(id));
